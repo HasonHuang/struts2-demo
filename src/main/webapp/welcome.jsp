@@ -9,7 +9,11 @@
 	</head>
 	
 	<body>
-		<% String username = request.getParameter("username"); %>>
-		<% out.println("欢迎，" + username); %>
+		<!-- 取出key=succTip的国际化消息，并使用<param>标签为该消息的占位符指定了值 -->
+		<s:text name="succTip">
+			<s:param><s:property value="username"/></s:param>
+		</s:text>
+		
+		<s:debug />
 	</body>
 </html>
